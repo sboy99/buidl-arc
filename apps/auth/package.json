@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@nestjs/jwt": "^10.1.1",
+    "@nestjs/mapped-types": "*",
+    "@nestjs/passport": "^10.0.2",
+    "bcryptjs": "^2.4.3",
+    "express-useragent": "^1.0.15",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
+  },
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.4",
+    "@types/express-useragent": "^1.0.2",
+    "@types/passport-jwt": "^3.0.9"
+  }
+}
