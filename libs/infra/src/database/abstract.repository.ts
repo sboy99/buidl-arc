@@ -1,96 +1,104 @@
-import { ConflictException, Logger, NotFoundException } from '@nestjs/common';
-import {
-  EntityManager,
-  FindManyOptions,
-  FindOptionsRelations,
-  FindOptionsSelect,
-  FindOptionsWhere,
-  Repository,
-} from 'typeorm';
-import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
-import { UpsertOptions } from 'typeorm/repository/UpsertOptions';
-import { AbstractEntity } from './abstract.entity';
+import { Logger, NotFoundException } from '@nestjs/common';
+import { randomUUID } from 'crypto';
+import { FilterQuery, Model, QueryOptions, Types, UpdateQuery } from 'mongoose';
+import { AbstractDocument } from './abstract.document';
 
-export abstract class AbstractRepository<T extends AbstractEntity<T>> {
+export abstract class AbstractRepository<TDocument extends AbstractDocument> {
   protected abstract readonly logger: Logger;
 
-  constructor(
-    readonly entityRepository: Repository<T>,
-    readonly entityManager: EntityManager,
-  ) {}
+  constructor(protected readonly model: Model<TDocument>) {}
 
-  async create(entity: T): Promise<T> {
-    return this.entityManager.save(entity);
+  async create(document: Omit<TDocument, '_id'>): Promise<TDocument> {
+    const createdDocument = await this.model.create({
+      ...document,
+      _id: new Types.ObjectId(),
+      uuid: randomUUID(),
+    });
+    return createdDocument.toObject();
   }
 
-  async upsert(
-    partialEntity: QueryDeepPartialEntity<T>,
-    conflictPathsOrOptions: UpsertOptions<T>,
-  ) {
-    return this.entityRepository.upsert(partialEntity, conflictPathsOrOptions);
+  async createMany(documents: Omit<TDocument, '_id'>[]): Promise<TDocument[]> {
+    const createdDocuments = await this.model.create(
+      documents.map((doc) => ({
+        ...doc,
+        _id: new Types.ObjectId(),
+        uuid: randomUUID(),
+      })),
+    );
+    return createdDocuments.map((createdDocument) =>
+      createdDocument.toObject(),
+    );
   }
 
   async list(
-    where: FindManyOptions<T>['where'],
-    relations?: FindManyOptions<T>['relations'],
-  ) {
-    return this.entityRepository.find({ where, relations });
+    filterQuery: FilterQuery<TDocument>,
+    queryOptions?: QueryOptions<TDocument>,
+  ): Promise<TDocument[]> {
+    return this.model
+      .find({ ...filterQuery, isDeleted: false }, undefined, queryOptions)
+      .lean<TDocument[]>(true);
   }
 
-  async checkUnique(
-    where: FindOptionsWhere<T>,
-    relations?: FindOptionsRelations<T>,
-    entityfoundMessage = 'Entity already exists!',
-  ): Promise<true> {
-    const entity = await this.entityRepository.findOne({
-      where,
-      relations,
-    });
-    if (!!entity) {
-      this.logger.warn('Document confict with where', where);
-      throw new ConflictException(entityfoundMessage);
-    }
-    return true;
-  }
+  async findOne(filterQuery: FilterQuery<TDocument>): Promise<TDocument> {
+    const document = await this.model
+      .findOne({ ...filterQuery, isDeleted: false })
+      .lean<TDocument>(true);
 
-  async findOne(
-    where: FindOptionsWhere<T>,
-    select?: FindOptionsSelect<T>,
-    relations?: FindOptionsRelations<T>,
-    notfoundMessage = 'Entity not found.',
-  ): Promise<T> {
-    const entity = await this.entityRepository.findOne({
-      where,
-      select,
-      relations,
-    });
-
-    if (!entity) {
-      this.logger.warn('Document not found with where', where);
-      throw new NotFoundException(notfoundMessage);
+    if (!document) {
+      this.logger.warn('Document was not found with filterQuery', filterQuery);
+      throw new NotFoundException('Document was not found');
     }
 
-    return entity;
+    return document;
   }
 
   async findOneAndUpdate(
-    where: FindOptionsWhere<T>,
-    partialEntity: QueryDeepPartialEntity<T>,
-  ) {
-    const updateResult = await this.entityRepository.update(
-      where,
-      partialEntity,
-    );
+    filterQuery: FilterQuery<TDocument>,
+    update: UpdateQuery<TDocument>,
+  ): Promise<TDocument> {
+    const document = await this.model
+      .findOneAndUpdate({ ...filterQuery, isDeleted: false }, update, {
+        new: true,
+      })
+      .lean<TDocument>(true);
 
-    if (!updateResult.affected) {
-      this.logger.warn('Entity not found with where', where);
-      throw new NotFoundException('Entity not found.');
+    if (!document) {
+      this.logger.warn('Document was not found with filterQuery', filterQuery);
+      throw new NotFoundException('Document was not found');
     }
 
-    return this.findOne(where);
+    return document;
   }
 
-  async findOneAndDelete(where: FindOptionsWhere<T>) {
-    await this.entityRepository.delete(where);
+  async findOneAndSoftDelete(
+    filterQuery: FilterQuery<TDocument>,
+  ): Promise<TDocument> {
+    const document = await this.model
+      .findOneAndUpdate(
+        { ...filterQuery, isDeleted: false },
+        {
+          $set: {
+            isDeleted: true,
+            deletedAt: new Date(),
+          },
+        },
+        {
+          new: true,
+        },
+      )
+      .lean<TDocument>(true);
+
+    if (!document) {
+      this.logger.warn('Document was not found with filterQuery', filterQuery);
+      throw new NotFoundException('Document was not found');
+    }
+
+    return document;
+  }
+
+  async findOneAndDelete(filterQuery: FilterQuery<TDocument>) {
+    return this.model
+      .findOneAndDelete({ ...filterQuery, isDeleted: false })
+      .lean<TDocument>(true);
   }
 }
