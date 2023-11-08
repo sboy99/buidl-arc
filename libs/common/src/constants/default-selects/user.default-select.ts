@@ -1,4 +1,4 @@
-import { User } from '@app/common/entities';
+import { User } from '@app/common/models';
 import { getSelects } from '@app/common/utils';
 
 export const UserDefaultSelects = getSelects<User>(

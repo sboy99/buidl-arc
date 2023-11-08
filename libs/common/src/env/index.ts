@@ -5,12 +5,15 @@ const num = z.coerce.number();
 // const bool = z.boolean();
 
 export const NODE_ENV = z.enum(['development', 'production']);
-// Database
+// Postgres
 export const POSTGRES_HOST = str;
 export const POSTGRES_PORT = num;
 export const POSTGRES_DB = str;
 export const POSTGRES_USER = str;
 export const POSTGRES_PASSWORD = str;
+
+// MongoDB
+export const MONGO_URI = str;
 
 export const HTTP_PORT = num;
 // Redis

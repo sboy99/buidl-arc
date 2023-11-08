@@ -1,44 +1,41 @@
 version: '3.8'
 
 services:
-  auth:
+  org:
     build:
       context: .
-      dockerfile: ./apps/auth/Dockerfile
+      dockerfile: ./apps/org/Dockerfile
       target: development
-    command: pnpm run start:dev auth
-    container_name: buidl_auth
+    command: pnpm run start:dev org
+    container_name: buidl_org
     depends_on:
-      postgres:
-        condition: service_healthy
-      rabbitmq:
+      mongo:
         condition: service_healthy
     env_file:
-      - ./apps/auth/.env
+      - ./apps/org/.env
     ports:
-      - '3001:3001'
+      - '3000:3000'
     volumes:
       - .:/usr/src/app
     networks:
       - buidl_net
 
   # Infra
-  postgres:
-    image: postgres:latest
-    container_name: postgres
-    env_file:
-      - .env
-    healthcheck:
-      test: pg_isready -q -d chatdb -U chatuser
-      interval: 10s
-      timeout: 5s
-      retries: 5
+  mongo:
+    image: mongo
+    container_name: mongodb
+    restart: always
     ports:
-      - '5432:5432'
+      - 27017:27017
+    volumes:
+      - buidl_data:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--eval', "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
     networks:
       - buidl_net
-    volumes:
-      - buidl_data:/var/lib/postgresql/data
 
   redis:
     image: redis
@@ -50,67 +47,6 @@ services:
       - buidl_adapter:/data
     networks:
       - buidl_net
-
-  rabbitmq:
-    image: rabbitmq
-    container_name: buidl_rabbitmq
-    restart: always
-    healthcheck:
-      test: rabbitmq-diagnostics -q ping
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    ports:
-      - '5672:5672'
-    volumes:
-      - buidl_broker:/var/lib/rabbitmq/mnesia/
-    networks:
-      - buidl_net
-
-  elasticsearch:
-    image: elasticsearch:8.9.2
-    container_name: elasticsearch
-    environment:
-      - 'ES_JAVA_OPTS=-Xms1g -Xmx1g'
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    ports:
-      - 9200:9200
-      - 9300:9300
-    volumes:
-      - buidl_es_data:/usr/share/elasticsearch/data
-      - ./configs/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-    networks:
-      - buidl_net
-    healthcheck:
-      test:
-        [
-          'CMD-SHELL',
-          'curl -u ${ELASTIC_SEARCH_USER}:${ELASTIC_SEARCH_PASSWORD} localhost:9200/_cluster/health || exit 1',
-        ]
-      interval: 15s
-      timeout: 5s
-      retries: 5
-
-  # Utility
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
-      PGADMIN_DEFAULT_PASSWORD: adminpassword
-    ports:
-      - '8080:80'
-    networks:
-      - buidl_net
-    volumes:
-      - buidl_pg_admin_data:/var/lib/pgadmin
-    depends_on:
-      postgres:
-        condition: service_healthy
 
 volumes:
   buidl_data:

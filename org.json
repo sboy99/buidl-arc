@@ -1,0 +1,1341 @@
+[
+  {
+    "_id": "65478dd9085c179548cf4b84",
+    "uuid": {
+      "type": "Buffer",
+      "data": [
+        189, 37, 56, 182, 2, 123, 68, 76, 187, 242, 77, 40, 129, 8, 161, 20
+      ]
+    },
+    "isDeleted": false,
+    "deletedAt": null,
+    "type": "startup",
+    "refType": "org",
+    "profiles": [
+      {
+        "_id": "65478dd9085c179548cf4b82",
+        "uuid": {
+          "type": "Buffer",
+          "data": [
+            6, 23, 9, 135, 109, 77, 64, 247, 175, 5, 174, 56, 103, 112, 121, 83
+          ]
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "type": "startup",
+        "refType": "profile",
+        "questionnaires": [
+          {
+            "_id": "65478dd9085c179548cf4b7a",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                146, 228, 31, 158, 225, 126, 65, 147, 135, 170, 81, 157, 2, 138,
+                163, 68
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupBasic",
+            "questions": [
+              {
+                "_id": "65478dd9085c179548cf4b76",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    14, 130, 247, 120, 108, 192, 70, 226, 150, 63, 179, 141,
+                    166, 163, 135, 91
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "name",
+                "answers": ["\"Startup\""],
+                "__v": 0
+              },
+              {
+                "_id": "65478dd9085c179548cf4b78",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    46, 55, 17, 144, 145, 250, 77, 27, 185, 52, 152, 144, 52,
+                    60, 68, 29
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "startupInOneTweet",
+                "answers": ["\"hi tweet\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          },
+          {
+            "_id": "65478dd9085c179548cf4b80",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                162, 144, 241, 103, 61, 197, 68, 173, 139, 65, 198, 193, 152,
+                83, 104, 172
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupProblem",
+            "questions": [
+              {
+                "_id": "65478dd9085c179548cf4b7c",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    48, 213, 132, 197, 234, 103, 64, 90, 174, 95, 86, 127, 120,
+                    168, 36, 247
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "describe",
+                "answers": ["\"Solving problem\""],
+                "__v": 0
+              },
+              {
+                "_id": "65478dd9085c179548cf4b7e",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    133, 85, 186, 195, 195, 93, 65, 124, 182, 120, 251, 0, 159,
+                    249, 170, 192
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "reason",
+                "answers": ["\"I love to solve problem\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          },
+          {
+            "_id": "6547a4cd851fa86c358e8ce0",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                248, 153, 197, 24, 18, 204, 72, 199, 169, 214, 205, 95, 160,
+                177, 233, 227
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547a4cd851fa86c358e8cdc",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    170, 76, 59, 12, 253, 194, 77, 253, 176, 224, 102, 24, 212,
+                    51, 112, 4
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["7"],
+                "__v": 0
+              },
+              {
+                "_id": "6547a4cd851fa86c358e8cde",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    104, 25, 173, 132, 148, 124, 75, 151, 134, 247, 113, 77,
+                    193, 55, 179, 193
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"My sample update 2\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          },
+          {
+            "_id": "6547a536851fa86c358e8ceb",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                228, 185, 73, 154, 22, 20, 76, 167, 151, 192, 62, 100, 160, 78,
+                82, 168
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547a536851fa86c358e8ce7",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    29, 151, 107, 199, 49, 63, 74, 109, 153, 55, 152, 115, 77,
+                    244, 50, 61
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["10"],
+                "__v": 0
+              },
+              {
+                "_id": "6547a536851fa86c358e8ce9",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    246, 146, 11, 122, 79, 119, 68, 123, 144, 10, 125, 5, 197,
+                    156, 10, 21
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"My sample update 10\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          }
+        ],
+        "__v": 0
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "65478eacc1bba85800f60cb3",
+    "uuid": {
+      "type": "Buffer",
+      "data": [
+        150, 115, 140, 89, 146, 89, 74, 62, 169, 149, 83, 131, 120, 45, 45, 75
+      ]
+    },
+    "isDeleted": false,
+    "deletedAt": null,
+    "type": "startup",
+    "refType": "org",
+    "profiles": [
+      {
+        "_id": "65478eacc1bba85800f60cb1",
+        "uuid": {
+          "type": "Buffer",
+          "data": [
+            231, 248, 241, 129, 110, 82, 76, 217, 181, 107, 29, 140, 212, 244,
+            101, 69
+          ]
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "type": "startup",
+        "refType": "profile",
+        "questionnaires": [
+          {
+            "_id": "65478eacc1bba85800f60ca9",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                251, 244, 200, 213, 236, 46, 66, 36, 171, 245, 111, 237, 9, 154,
+                73, 82
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupBasic",
+            "questions": [
+              {
+                "_id": "65478eacc1bba85800f60ca5",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    165, 170, 183, 215, 10, 195, 65, 80, 154, 190, 206, 112,
+                    164, 60, 209, 86
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "name",
+                "answers": ["\"Startup\""],
+                "__v": 0
+              },
+              {
+                "_id": "65478eacc1bba85800f60ca7",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    252, 14, 15, 7, 54, 239, 75, 131, 138, 141, 78, 227, 214,
+                    117, 33, 143
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "startupInOneTweet",
+                "answers": ["\"hi tweet\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          },
+          {
+            "_id": "65478eacc1bba85800f60caf",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                90, 148, 183, 123, 98, 243, 72, 49, 140, 121, 187, 149, 129,
+                226, 197, 153
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupProblem",
+            "questions": [
+              {
+                "_id": "65478eacc1bba85800f60cab",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    15, 102, 227, 69, 242, 161, 66, 13, 190, 4, 112, 101, 117,
+                    203, 220, 83
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "describe",
+                "answers": ["\"Solving problem\""],
+                "__v": 0
+              },
+              {
+                "_id": "65478eacc1bba85800f60cad",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    243, 54, 49, 234, 213, 44, 69, 34, 148, 145, 105, 220, 114,
+                    142, 161, 73
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "reason",
+                "answers": ["\"I love to solve problem\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          },
+          {
+            "_id": "6547aa47803938e96ecff384",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                93, 111, 238, 242, 87, 136, 76, 240, 178, 226, 129, 218, 122,
+                153, 242, 239
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547aa47803938e96ecff380",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    69, 57, 98, 103, 104, 129, 74, 134, 134, 68, 97, 213, 119,
+                    13, 45, 51
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["8"],
+                "__v": 0
+              },
+              {
+                "_id": "6547aa47803938e96ecff382",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    180, 31, 162, 155, 135, 119, 68, 38, 146, 126, 141, 140,
+                    201, 67, 42, 140
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"My update of the week\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          },
+          {
+            "_id": "6547aa9c803938e96ecff38f",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                63, 21, 235, 178, 132, 177, 66, 41, 173, 145, 195, 199, 6, 33,
+                84, 175
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547aa9c803938e96ecff38b",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    217, 121, 221, 192, 174, 60, 79, 237, 177, 170, 22, 208,
+                    132, 163, 201, 139
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["6"],
+                "__v": 0
+              },
+              {
+                "_id": "6547aa9c803938e96ecff38d",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    243, 169, 94, 116, 47, 112, 68, 199, 143, 226, 10, 248, 209,
+                    40, 106, 34
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"My update of the week is so average\""],
+                "__v": 0
+              }
+            ],
+            "__v": 0
+          }
+        ],
+        "__v": 0,
+        "updatedAt": "2023-11-05T14:45:48.803Z"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6547aee3a8d5ee8872686864",
+    "uuid": {
+      "type": "Buffer",
+      "data": [
+        150, 21, 183, 129, 97, 101, 78, 14, 139, 51, 106, 184, 136, 178, 56, 135
+      ]
+    },
+    "isDeleted": false,
+    "deletedAt": null,
+    "type": "startup",
+    "refType": "org",
+    "profiles": [
+      {
+        "_id": "6547aee3a8d5ee8872686862",
+        "uuid": {
+          "type": "Buffer",
+          "data": [
+            155, 125, 237, 12, 140, 55, 73, 75, 163, 151, 248, 214, 240, 50, 37,
+            181
+          ]
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "type": "startup",
+        "refType": "profile",
+        "questionnaires": [
+          {
+            "_id": "6547aee3a8d5ee887268685a",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                103, 14, 143, 27, 46, 3, 79, 101, 174, 210, 112, 107, 148, 38,
+                148, 228
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupBasic",
+            "questions": [
+              {
+                "_id": "6547aee3a8d5ee8872686856",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    119, 83, 210, 226, 37, 138, 77, 215, 147, 150, 99, 118, 181,
+                    48, 69, 198
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "name",
+                "answers": ["\"Buidlers\""],
+                "createdAt": "2023-11-05T15:04:03.133Z",
+                "updatedAt": "2023-11-05T15:04:03.133Z"
+              },
+              {
+                "_id": "6547aee3a8d5ee8872686858",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    47, 212, 57, 218, 52, 234, 73, 92, 188, 206, 157, 211, 215,
+                    135, 51, 17
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "startupInOneTweet",
+                "answers": ["\"hi we are buidlers\""],
+                "createdAt": "2023-11-05T15:04:03.141Z",
+                "updatedAt": "2023-11-05T15:04:03.141Z"
+              }
+            ],
+            "createdAt": "2023-11-05T15:04:03.145Z",
+            "updatedAt": "2023-11-05T15:04:03.145Z"
+          },
+          {
+            "_id": "6547aee3a8d5ee8872686860",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                109, 143, 176, 161, 210, 208, 79, 105, 141, 134, 45, 174, 208,
+                164, 96, 255
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupProblem",
+            "questions": [
+              {
+                "_id": "6547aee3a8d5ee887268685c",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    202, 248, 191, 176, 65, 234, 69, 75, 159, 92, 67, 241, 3,
+                    167, 36, 95
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "describe",
+                "answers": ["\"Buidling\""],
+                "createdAt": "2023-11-05T15:04:03.148Z",
+                "updatedAt": "2023-11-05T15:04:03.148Z"
+              },
+              {
+                "_id": "6547aee3a8d5ee887268685e",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    241, 207, 233, 176, 63, 89, 67, 141, 149, 114, 39, 81, 121,
+                    156, 45, 84
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "reason",
+                "answers": ["\"I love Buidling things\""],
+                "createdAt": "2023-11-05T15:04:03.151Z",
+                "updatedAt": "2023-11-05T15:04:03.151Z"
+              }
+            ],
+            "createdAt": "2023-11-05T15:04:03.154Z",
+            "updatedAt": "2023-11-05T15:04:03.154Z"
+          },
+          {
+            "_id": "6547b1b43fe80a1708344da4",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                51, 185, 251, 109, 242, 21, 65, 57, 144, 19, 179, 12, 7, 211,
+                173, 119
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547b1b43fe80a1708344da0",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    194, 16, 190, 195, 11, 191, 68, 233, 176, 14, 37, 86, 141,
+                    236, 218, 212
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["6"],
+                "createdAt": "2023-11-05T15:16:04.673Z",
+                "updatedAt": "2023-11-05T15:16:04.673Z"
+              },
+              {
+                "_id": "6547b1b43fe80a1708344da2",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    59, 26, 23, 173, 198, 2, 68, 222, 128, 12, 208, 104, 230,
+                    214, 148, 189
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"rom rom rom\""],
+                "createdAt": "2023-11-05T15:16:04.682Z",
+                "updatedAt": "2023-11-05T15:16:04.682Z"
+              }
+            ],
+            "createdAt": "2023-11-05T15:16:04.684Z",
+            "updatedAt": "2023-11-05T15:16:04.684Z"
+          },
+          {
+            "_id": "6547b1e23fe80a1708344daf",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                61, 102, 150, 174, 114, 43, 67, 187, 174, 174, 165, 88, 141,
+                108, 38, 35
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547b1e23fe80a1708344dab",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    245, 253, 67, 241, 169, 184, 75, 113, 130, 53, 101, 183,
+                    227, 100, 51, 176
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["6"],
+                "createdAt": "2023-11-05T15:16:50.413Z",
+                "updatedAt": "2023-11-05T15:16:50.413Z"
+              },
+              {
+                "_id": "6547b1e23fe80a1708344dad",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    71, 250, 160, 28, 174, 109, 69, 147, 135, 226, 36, 31, 223,
+                    130, 4, 33
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"rocket boom boom\""],
+                "createdAt": "2023-11-05T15:16:50.416Z",
+                "updatedAt": "2023-11-05T15:16:50.416Z"
+              }
+            ],
+            "createdAt": "2023-11-05T15:16:50.419Z",
+            "updatedAt": "2023-11-05T15:16:50.419Z"
+          },
+          {
+            "_id": "6547ca3369f72d620f4ed87e",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                214, 42, 9, 39, 157, 199, 72, 168, 176, 39, 187, 207, 181, 208,
+                170, 143
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547ca3369f72d620f4ed87a",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    199, 173, 43, 55, 79, 168, 78, 104, 175, 114, 130, 209, 120,
+                    50, 87, 121
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["9"],
+                "createdAt": "2023-11-05T17:00:35.045Z",
+                "updatedAt": "2023-11-05T17:00:35.045Z"
+              },
+              {
+                "_id": "6547ca3369f72d620f4ed87c",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    181, 114, 35, 54, 211, 17, 72, 123, 163, 178, 178, 183, 4,
+                    246, 166, 56
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"dracula dd my blood\""],
+                "createdAt": "2023-11-05T17:00:35.052Z",
+                "updatedAt": "2023-11-05T17:00:35.052Z"
+              }
+            ],
+            "createdAt": "2023-11-05T17:00:35.055Z",
+            "updatedAt": "2023-11-05T17:00:35.055Z"
+          },
+          {
+            "_id": "6547ce1d163a7385ec15e96f",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                173, 62, 127, 11, 72, 150, 65, 8, 150, 165, 211, 229, 7, 63, 28,
+                167
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547ce1d163a7385ec15e96b",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    130, 172, 241, 73, 76, 180, 66, 37, 165, 71, 22, 16, 146,
+                    225, 229, 154
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["9"],
+                "createdAt": "2023-11-05T17:17:17.487Z",
+                "updatedAt": "2023-11-05T17:17:17.487Z"
+              },
+              {
+                "_id": "6547ce1d163a7385ec15e96d",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    194, 26, 248, 63, 20, 59, 77, 3, 183, 41, 161, 245, 254,
+                    195, 61, 197
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"dracula dd my blood\""],
+                "createdAt": "2023-11-05T17:17:17.496Z",
+                "updatedAt": "2023-11-05T17:17:17.496Z"
+              }
+            ],
+            "createdAt": "2023-11-05T17:17:17.500Z",
+            "updatedAt": "2023-11-05T17:17:17.500Z"
+          },
+          {
+            "_id": "6547d085e781ceb330a0edad",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                181, 161, 3, 190, 213, 84, 68, 191, 157, 43, 207, 184, 197, 9,
+                108, 1
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "6547d085e781ceb330a0eda7",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    168, 134, 127, 116, 35, 146, 72, 227, 182, 151, 149, 103,
+                    147, 103, 118, 64
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["9"],
+                "createdAt": "2023-11-05T17:27:33.256Z",
+                "updatedAt": "2023-11-05T17:27:33.256Z"
+              },
+              {
+                "_id": "6547d085e781ceb330a0eda9",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    117, 100, 205, 150, 222, 86, 79, 244, 137, 104, 249, 205,
+                    198, 3, 199, 115
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"dracula dd my blood\""],
+                "createdAt": "2023-11-05T17:27:33.261Z",
+                "updatedAt": "2023-11-05T17:27:33.261Z"
+              },
+              {
+                "_id": "6547d085e781ceb330a0edab",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    238, 91, 251, 80, 89, 121, 75, 30, 179, 96, 221, 20, 65,
+                    100, 133, 48
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "object_array",
+                "refType": "question",
+                "fieldName": "categoricalUpdates",
+                "answers": [
+                  "[{\"category\":\"6547aee3a8d5ee8872686862\",\"details\":\"hi this is a update\"}]"
+                ],
+                "createdAt": "2023-11-05T17:27:33.264Z",
+                "updatedAt": "2023-11-05T17:27:33.264Z"
+              }
+            ],
+            "createdAt": "2023-11-05T17:27:33.267Z",
+            "updatedAt": "2023-11-05T17:27:33.267Z"
+          }
+        ],
+        "createdAt": "2023-11-05T15:04:03.155Z",
+        "updatedAt": "2023-11-05T17:27:33.269Z"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "65487c1957df4d3d41427453",
+    "uuid": {
+      "type": "Buffer",
+      "data": [
+        210, 215, 64, 49, 224, 149, 70, 132, 141, 168, 190, 148, 65, 250, 122,
+        68
+      ]
+    },
+    "isDeleted": false,
+    "deletedAt": null,
+    "type": "startup",
+    "refType": "org",
+    "profiles": [
+      {
+        "_id": "65487c1957df4d3d41427451",
+        "uuid": {
+          "type": "Buffer",
+          "data": [
+            128, 8, 72, 222, 71, 237, 73, 63, 133, 157, 108, 250, 30, 161, 3, 91
+          ]
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "type": "startup",
+        "refType": "profile",
+        "questionnaires": [
+          {
+            "_id": "65487c1957df4d3d41427449",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                245, 40, 89, 53, 197, 150, 70, 224, 187, 142, 245, 86, 112, 249,
+                65, 109
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupBasic",
+            "questions": [
+              {
+                "_id": "65487c1957df4d3d41427445",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    63, 182, 164, 137, 27, 150, 70, 134, 130, 58, 41, 175, 135,
+                    76, 206, 101
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "name",
+                "answers": ["\"Aadarsh\""],
+                "createdAt": "2023-11-06T05:39:37.697Z",
+                "updatedAt": "2023-11-06T05:39:37.697Z"
+              },
+              {
+                "_id": "65487c1957df4d3d41427447",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    231, 248, 128, 37, 190, 53, 71, 237, 171, 71, 238, 80, 107,
+                    11, 127, 147
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "startupInOneTweet",
+                "answers": ["\"hi we are buidlers\""],
+                "createdAt": "2023-11-06T05:39:37.707Z",
+                "updatedAt": "2023-11-06T05:39:37.707Z"
+              }
+            ],
+            "createdAt": "2023-11-06T05:39:37.710Z",
+            "updatedAt": "2023-11-06T05:39:37.710Z"
+          },
+          {
+            "_id": "65487c1957df4d3d4142744f",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                109, 98, 102, 149, 230, 184, 77, 21, 185, 220, 17, 93, 194, 113,
+                190, 45
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_onboarding",
+            "refType": "questionnaire",
+            "fieldName": "startupProblem",
+            "questions": [
+              {
+                "_id": "65487c1957df4d3d4142744b",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    193, 50, 194, 67, 105, 160, 79, 9, 154, 246, 249, 184, 165,
+                    118, 39, 246
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "describe",
+                "answers": ["\"Buidling aadarsh\""],
+                "createdAt": "2023-11-06T05:39:37.717Z",
+                "updatedAt": "2023-11-06T05:39:37.717Z"
+              },
+              {
+                "_id": "65487c1957df4d3d4142744d",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    144, 83, 47, 117, 81, 158, 75, 182, 158, 49, 129, 119, 190,
+                    103, 117, 64
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "reason",
+                "answers": ["\"I love Buidling things\""],
+                "createdAt": "2023-11-06T05:39:37.719Z",
+                "updatedAt": "2023-11-06T05:39:37.719Z"
+              }
+            ],
+            "createdAt": "2023-11-06T05:39:37.723Z",
+            "updatedAt": "2023-11-06T05:39:37.723Z"
+          },
+          {
+            "_id": "65487c7a57df4d3d4142745d",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                231, 148, 94, 118, 157, 97, 70, 179, 172, 144, 75, 45, 82, 231,
+                120, 161
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "65487c7a57df4d3d41427459",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    31, 73, 119, 3, 148, 125, 73, 233, 152, 8, 137, 59, 209, 53,
+                    201, 151
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["9"],
+                "createdAt": "2023-11-06T05:41:14.344Z",
+                "updatedAt": "2023-11-06T05:41:14.344Z"
+              },
+              {
+                "_id": "65487c7a57df4d3d4142745b",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    187, 163, 124, 115, 205, 64, 71, 117, 174, 187, 48, 38, 40,
+                    100, 102, 170
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"draculddf \""],
+                "createdAt": "2023-11-06T05:41:14.347Z",
+                "updatedAt": "2023-11-06T05:41:14.347Z"
+              }
+            ],
+            "createdAt": "2023-11-06T05:41:14.349Z",
+            "updatedAt": "2023-11-06T05:41:14.349Z"
+          },
+          {
+            "_id": "65487ca557df4d3d41427468",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                15, 39, 244, 8, 236, 183, 73, 230, 157, 198, 222, 134, 254, 170,
+                148, 80
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "65487ca557df4d3d41427464",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    245, 223, 170, 41, 148, 207, 65, 188, 190, 228, 146, 107,
+                    72, 41, 235, 159
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["10"],
+                "createdAt": "2023-11-06T05:41:57.928Z",
+                "updatedAt": "2023-11-06T05:41:57.928Z"
+              },
+              {
+                "_id": "65487ca557df4d3d41427466",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    157, 199, 166, 77, 44, 231, 64, 119, 142, 82, 122, 21, 123,
+                    202, 35, 252
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"draculddf \""],
+                "createdAt": "2023-11-06T05:41:57.931Z",
+                "updatedAt": "2023-11-06T05:41:57.931Z"
+              }
+            ],
+            "createdAt": "2023-11-06T05:41:57.932Z",
+            "updatedAt": "2023-11-06T05:41:57.932Z"
+          },
+          {
+            "_id": "65487cbf57df4d3d41427473",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                243, 102, 150, 64, 190, 209, 65, 161, 165, 6, 139, 2, 24, 228,
+                216, 68
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "65487cbf57df4d3d4142746f",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    130, 40, 64, 24, 226, 144, 78, 115, 189, 222, 32, 163, 222,
+                    46, 149, 39
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["10"],
+                "createdAt": "2023-11-06T05:42:23.483Z",
+                "updatedAt": "2023-11-06T05:42:23.483Z"
+              },
+              {
+                "_id": "65487cbf57df4d3d41427471",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    125, 63, 186, 210, 3, 63, 74, 155, 157, 15, 188, 95, 206,
+                    230, 118, 54
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"draculddf \""],
+                "createdAt": "2023-11-06T05:42:23.485Z",
+                "updatedAt": "2023-11-06T05:42:23.485Z"
+              }
+            ],
+            "createdAt": "2023-11-06T05:42:23.487Z",
+            "updatedAt": "2023-11-06T05:42:23.487Z"
+          },
+          {
+            "_id": "65488a2757df4d3d41427486",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                59, 4, 47, 98, 215, 19, 71, 210, 161, 9, 87, 229, 86, 14, 46, 68
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "65488a2757df4d3d41427482",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    41, 51, 242, 236, 113, 26, 64, 65, 177, 20, 48, 131, 172,
+                    98, 127, 80
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["10"],
+                "createdAt": "2023-11-06T06:39:35.603Z",
+                "updatedAt": "2023-11-06T06:39:35.603Z"
+              },
+              {
+                "_id": "65488a2757df4d3d41427484",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    223, 6, 140, 231, 202, 4, 74, 66, 183, 44, 227, 5, 229, 77,
+                    173, 40
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"draculddf \""],
+                "createdAt": "2023-11-06T06:39:35.605Z",
+                "updatedAt": "2023-11-06T06:39:35.605Z"
+              }
+            ],
+            "createdAt": "2023-11-06T06:39:35.607Z",
+            "updatedAt": "2023-11-06T06:39:35.607Z"
+          },
+          {
+            "_id": "65488a5d57df4d3d41427491",
+            "uuid": {
+              "type": "Buffer",
+              "data": [
+                145, 208, 4, 214, 177, 87, 79, 227, 146, 33, 110, 238, 3, 13,
+                112, 126
+              ]
+            },
+            "isDeleted": false,
+            "deletedAt": null,
+            "type": "startup_update",
+            "refType": "questionnaire",
+            "fieldName": "startupUpdate",
+            "questions": [
+              {
+                "_id": "65488a5d57df4d3d4142748d",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    166, 0, 252, 210, 19, 78, 76, 90, 173, 34, 195, 168, 226,
+                    222, 196, 211
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "number",
+                "refType": "question",
+                "fieldName": "morale",
+                "answers": ["11"],
+                "createdAt": "2023-11-06T06:40:29.663Z",
+                "updatedAt": "2023-11-06T06:40:29.663Z"
+              },
+              {
+                "_id": "65488a5d57df4d3d4142748f",
+                "uuid": {
+                  "type": "Buffer",
+                  "data": [
+                    98, 116, 185, 56, 176, 249, 77, 255, 175, 132, 5, 59, 243,
+                    12, 113, 211
+                  ]
+                },
+                "isDeleted": false,
+                "deletedAt": null,
+                "type": "string",
+                "refType": "question",
+                "fieldName": "highlight",
+                "answers": ["\"fghg \""],
+                "createdAt": "2023-11-06T06:40:29.665Z",
+                "updatedAt": "2023-11-06T06:40:29.665Z"
+              }
+            ],
+            "createdAt": "2023-11-06T06:40:29.667Z",
+            "updatedAt": "2023-11-06T06:40:29.667Z"
+          }
+        ],
+        "createdAt": "2023-11-06T05:39:37.726Z",
+        "updatedAt": "2023-11-06T06:40:29.669Z"
+      }
+    ],
+    "__v": 0
+  }
+]

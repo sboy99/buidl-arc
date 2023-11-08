@@ -60,6 +60,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
       time,
     };
 
+    console.log(exception);
     this.logger.error((exception as any).message);
     httpAdapter.reply(ctx.getResponse(), exceptionPayload, statusCode);
   }

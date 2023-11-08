@@ -1,4 +1,5 @@
 import { AllExceptionsFilter } from '@app/common/filters';
+import { ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import * as cookieParser from 'cookie-parser';
@@ -12,6 +13,15 @@ async function bootstrap() {
 
   const httpAdapter = app.get(HttpAdapterHost);
   app.useGlobalFilters(new AllExceptionsFilter(httpAdapter));
+
+  // pipes
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+      whitelist: true,
+      stopAtFirstError: true,
+    }),
+  );
 
   // logger
   app.useLogger(app.get(Logger));

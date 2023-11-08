@@ -1,13 +1,27 @@
-import { MicroServices, Queues } from '@app/common/constants';
+import {
+  LookupReferenceModel,
+  LookupValueModel,
+  OrgModel,
+  ProfileModel,
+  QuestionModel,
+  QuestionnaireModel,
+} from '@app/common/models';
 import { DatabaseModule } from '@app/infra/database';
 import { LoggerModule } from '@app/infra/logger';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
-import { ClientsModule, Transport } from '@nestjs/microservices';
+import { ClientsModule } from '@nestjs/microservices';
 import { OrgEnvSchema, TOrgEnv } from './env';
 import { OrgController } from './org.controller';
 import { OrgService } from './org.service';
+import { OrgTranslateService } from './org.translate.service';
+import {
+  OrgRepository,
+  ProfileRepository,
+  QuestionRepository,
+  QuestionnaireRepository,
+} from './repositories';
 
 @Module({
   imports: [
@@ -15,22 +29,6 @@ import { OrgService } from './org.service';
       isGlobal: true,
       validationSchema: OrgEnvSchema,
       validate: (config) => OrgEnvSchema.parse(config),
-    }),
-    ClientsModule.registerAsync({
-      clients: [
-        {
-          name: MicroServices.AUTH_CLIENT,
-          imports: [ConfigModule],
-          inject: [ConfigService],
-          useFactory: (configService: ConfigService<TOrgEnv>) => ({
-            transport: Transport.RMQ,
-            options: {
-              urls: [configService.getOrThrow<string>('RABBITMQ_URI')],
-              queue: Queues.AUTH_QUEUE,
-            },
-          }),
-        },
-      ],
     }),
     JwtModule.registerAsync({
       global: true,
@@ -41,9 +39,24 @@ import { OrgService } from './org.service';
       }),
     }),
     DatabaseModule,
+    DatabaseModule.forFeature([
+      OrgModel,
+      ProfileModel,
+      QuestionnaireModel,
+      QuestionModel,
+      LookupValueModel,
+      LookupReferenceModel,
+    ]),
     LoggerModule,
   ],
   controllers: [OrgController],
-  providers: [OrgService],
+  providers: [
+    OrgService,
+    OrgTranslateService,
+    OrgRepository,
+    ProfileRepository,
+    QuestionnaireRepository,
+    QuestionRepository,
+  ],
 })
 export class OrgModule {}

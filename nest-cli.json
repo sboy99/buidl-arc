@@ -61,6 +61,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/friend/tsconfig.app.json"
       }
+    },
+    "org": {
+      "type": "application",
+      "root": "apps/org",
+      "entryFile": "main",
+      "sourceRoot": "apps/org/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/org/tsconfig.app.json"
+      }
     }
   },
   "monorepo": true,
